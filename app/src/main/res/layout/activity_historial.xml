@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- activity_historial.xml -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewTituloHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Historial de IMC"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:id="@+id/tableLayoutHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTituloHistorial"
+            android:layout_marginTop="16dp"
+            android:stretchColumns="0,1,2,3">
+
+            <!-- Cabecera de la tabla -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Altura (m)"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peso (kg)"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IMC"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Celdas vacías ocultas -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/textViewIMCPromedio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tableLayoutHistorial"
+            android:layout_marginTop="16dp"
+            android:text="IMC Promedio: "
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewIMCPromedio"
+            android:layout_marginTop="16dp"
+            android:text="Regresar" />
+
+        <Button
+            android:id="@+id/btnBorrarHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnRegresar"
+            android:layout_marginTop="8dp"
+            android:text="Borrar Historial" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
